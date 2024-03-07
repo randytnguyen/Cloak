@@ -1,0 +1,31 @@
+{
+  "manifest_version": 2,
+  "name": "Cloak - Hide YouTube video controls",
+  "description": "Hide YouTube video controls with a keyboard shortcut and redirect to a specific YouTube video.",
+  "version": "1.2",
+  "icons": {
+    "16": "img/icon16.png",
+    "32": "img/icon32.png",
+    "48": "img/icon48.png",
+    "128": "img/icon128.png"
+  },
+  "background": {
+    "scripts": ["src/background.js"],
+    "persistent": false
+  },
+  "commands": {
+    "hide": {
+      "suggested_key": {
+        "default": "Ctrl+I"
+      },
+      "description": "Hide/show controls"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
