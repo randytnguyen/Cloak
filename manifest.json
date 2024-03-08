@@ -25,7 +25,9 @@
     "activeTab",
     "tabs"
   ],
-  "action": {
-    "default_popup": "popup.html"
+  "browser_action": {
+    "default_icon": "img/icon128.png",
+    "default_title": "browser action demo",
+    "default_popup": "src/popup.html"
   }
 }
