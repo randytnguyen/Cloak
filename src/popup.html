@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Link to the Font Awesome library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   <title>YouTube Keyboard Shortcuts</title>
   <style>
     body {
@@ -19,30 +21,35 @@
   </style>
 </head>
 <body>
+  <button id="playPauseButton"><i class="fas fa-play"></i>/<i class="fas fa-pause"></i></button>
+  <button id="rewindButton"><i class="fas fa-backward"></i></button>
+  <button id="forwardButton"><i class="fas fa-forward"></i></button>
+  <button id="volumeDownButton"><i class="fas fa-volume-down"></i></button>
+  <button id="volumeUpButton"><i class="fas fa-volume-up"></i></button>
+
   <h2>YouTube Keyboard Shortcuts</h2>
-  <button id="playPause">Spacebar: Play/Pause</button>
-  <button id="playPauseMediaKey">Play/Pause Media Key on keyboards</button>
-  <button id="pausePlay">k: Pause/Play in player</button>
-  <button id="muteUnmute">m: Mute/unmute the video</button>
-  <button id="stopMediaKey">Stop Media Key on keyboards</button>
-  <button id="nextTrackMediaKey">Next Track Media Key on keyboards</button>
-  <button id="seekBackward">Left/Right arrow on the seek bar: Seek backward/forward 5 seconds</button>
-  <button id="seekBackward10">j: Seek backward 10 seconds in player</button>
-  <button id="seekForward10">l: Seek forward 10 seconds in player</button>
-  <button id="skipNextFrame">.: Skip to the next frame while paused</button>
-  <button id="goBackFrame">,: Go back to the previous frame while paused</button>
-  <button id="speedUpPlayback">>: Speed up the video playback rate</button>
-  <button id="slowDownPlayback"><: Slow down the video playback rate</button>
-  <button id="seekToBeginning">Home/End on the seek bar: Seek to the beginning/last seconds of the video</button>
-  <button id="changeVolume">Up/Down arrow on the seek bar: Increase/Decrease volume 5%</button>
-  <button id="seekTo10Percent">Numbers 1 to 9: Seek to the 10% to 90% of the video</button>
-  <button id="seekToBeginningVideo">Number 0: Seek to the beginning of the video</button>
-  <button id="goToSearch">/: Go to search box</button>
-  <button id="activateFullScreen">f: Activate full screen</button>
-  <button id="toggleCaptions">c: Activate closed captions and subtitles</button>
-  <button id="moveToNextVideo">Shift+N: Move to the next video</button>
-  <button id="moveToPreviousVideo">Shift+P: Move to the previous video</button>
-  <button id="openMiniplayer">i: Open the Miniplayer</button>
-  <script src="popup.js"></script>
+  <ul>
+    <li id="playPause"><b>Spacebar</b> - Play/Pause</li>
+    <li id="playPauseMediaKey">Play/Pause Media Key on keyboards</li>
+    <li id="pausePlay"><b>k</b> - Pause/Play in player</li>
+    <li id="muteUnmute"><b>m</b> - Mute/unmute the video</li>
+    <li id="seekBackward">Left/Right arrow on the seek bar - Seek backward/forward 5 seconds</li>
+    <li id="seekBackward10"><b>j</b> - Seek backward 10 seconds in player</li>
+    <li id="seekForward10"><b>l</b> - Seek forward 10 seconds in player</li>
+    <li id="skipNextFrame"><b>.</b> - Skip to the next frame while paused</li>
+    <li id="goBackFrame"><b>,</b> - Go back to the previous frame while paused</li>
+    <li id="speedUpPlayback"><b>&gt;</b> - Speed up the video playback rate</li>
+    <li id="slowDownPlayback"><b>&lt;</b> - Slow down the video playback rate</li>
+    <li id="seekToBeginning"><b>Home and End</b> - Home/End on the seek bar - Seek to the beginning/last seconds of the video</li>
+    <li id="changeVolume"><b>Up/Down arrow on the seek bar</b> - Increase/Decrease volume 5%</li>
+    <li id="seekTo10Percent">Numbers <b>1</b> to <b>9</b> - Seek to the 10% to 90% of the video</li>
+    <li id="seekToBeginningVideo"><b>Number 0</b> - Seek to the beginning of the video</li>
+    <li id="goToSearch"><b>&sol;</b> - Go to search box</li>
+    <li id="activateFullScreen"><b>f</b> - Activate full screen</li>
+    <li id="toggleCaptions"><b>c</b> - Activate closed captions and subtitles</li>
+    <li id="moveToNextVideo"><b>Shift+N</b> - Move to the next video</li>
+    <li id="moveToPreviousVideo"><b>Shift+P</b> - Move to the previous video</li>
+    <li id="openMiniplayer"><b>i</b> - Open the Miniplayer</li>
+  </ul>
 </body>
 </html>
