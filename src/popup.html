@@ -11,12 +11,19 @@
 </head>
 <body>
   <!-- Extension pop-up Video Controls -->
-  <button id="playPauseButton"><i class="fas fa-play"></i>/<i class="fas fa-pause"></i></button>
-  <button id="rewindButton"><i class="fas fa-backward"></i></button>
-  <button id="forwardButton"><i class="fas fa-forward"></i></button>
-  <button id="volumeDownButton"><i class="fas fa-volume-down"></i></button>
-  <button id="volumeUpButton"><i class="fas fa-volume-up"></i></button>
-
+  <button id="playPauseButton" onclick="sendMessage('playPause')"><i class="fas fa-play"></i>/<i class="fas fa-pause"></i></button>
+  <button id="rewindButton" onclick="sendMessage('rewind')"><i class="fas fa-backward"></i></button>
+  <button id="forwardButton" onclick="sendMessage('forward')"><i class="fas fa-forward"></i></button>
+  <button id="volumeDownButton" onclick="sendMessage('volumeDown')"><i class="fas fa-volume-down"></i></button>
+  <button id="volumeUpButton" onclick="sendMessage('volumeUp')"><i class="fas fa-volume-up"></i></button>
+  
+  <script>
+  function sendMessage(action) {
+   chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+      chrome.tabs.sendMessage(tabs[0].id, {action: action});
+   });
+  }
+  </script>
   <!-- YouTube Keyboard Shortcuts list -->
   <h2 id="shortcutsTitle"><b></b>YouTube Keyboard Shortcuts</b></h2>
   <ul>
